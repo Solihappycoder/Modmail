@@ -322,10 +322,9 @@ class Utility(commands.Cog):
         embed = discord.Embed(color=self.bot.main_color, timestamp=discord.utils.utcnow())
         embed.set_author(
             name="Modmail - About",
-            icon_url=self.bot.user.display_avatar.url,
-            url="https://discord.gg/F34cRU8",
+            icon_url=self.bot.user.display_avatar.url
         )
-        embed.set_thumbnail(url=self.bot.user.display_avatar.url)
+        embed.set_thumbnail(url="https://media.discordapp.net/attachments/1233652812819464192/1249269713310322760/S_1.png?ex=66d37455&is=66d222d5&hm=4db15cb2fafc3bd2a43fc5da6770de9027f21686c2b3b39620acb76fde1dc271&=&format=webp&quality=lossless")
 
         desc = "This is an open source Discord bot that serves as a means for "
         desc += "members to easily communicate with server administrators in "
@@ -336,7 +335,7 @@ class Utility(commands.Cog):
         embed.add_field(name="Latency", value=f"{self.bot.latency * 1000:.2f} ms")
         embed.add_field(name="Version", value=f"`{self.bot.version}`")
         embed.add_field(name="Authors", value="`kyb3r`, `Taki`, `fourjr`")
-        embed.add_field(name="Hosting Method", value=self.bot.hosting_method.name)
+        embed.add_field(name="Hosting Method", value="`SOLIDEV`")
 
         changelog = await Changelog.from_url(self.bot)
         latest = changelog.latest_version
@@ -350,23 +349,15 @@ class Utility(commands.Cog):
             footer = "You are up to date with the latest version."
 
         embed.add_field(
-            name="Want Modmail in Your Server?",
-            value="Follow the installation guide on [GitHub](https://github.com/modmail-dev/modmail/) "
-            "and join our [Discord server](https://discord.gg/cnUpwrnpYb)!",
+            name="Want A Modmail Bot in Your Server?",
+            value="**Use SoliDev Hosting Services**, if you want your own Modmail bot just like this one, please contact us"
+            "at soli@modmailhost.xyz or DM us at soli9867. We have affordable pricing, starting at $2 AUD a month.",
             inline=False,
         )
 
         embed.add_field(
-            name="Support the Developers",
-            value="This bot is completely free for everyone. We rely on kind individuals "
-            "like you to support us on [`Patreon`](https://patreon.com/kyber) (perks included) "
-            "to keep this bot free forever!",
-            inline=False,
-        )
-
-        embed.add_field(
-            name="Project Sponsors",
-            value=f"Checkout the people who supported Modmail with command `{self.bot.prefix}sponsors`!",
+            name="Modmail",
+            value=f"Open source bot on [Github](https://github.com/modmail-dev/Modmail)!",
             inline=False,
         )
 
